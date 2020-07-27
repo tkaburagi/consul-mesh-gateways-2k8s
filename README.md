@@ -1,4 +1,5 @@
-![](gke-eks.png)
+![](2k8s.png)
+![](2k8s-2.png)
 
 on gke
 ```shell script
