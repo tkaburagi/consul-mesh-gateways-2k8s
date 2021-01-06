@@ -1,0 +1,8 @@
+*.pem
+login-k8s-eks.sh
+login-k8s-gke.sh
+consul-federation-secret.yaml
+memo
+/old-app/*
+rds-secret-gke.yml
+/ui-java/*

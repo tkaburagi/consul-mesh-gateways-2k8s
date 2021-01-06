@@ -1,7 +1,7 @@
 global:
   name: consul
-  image: consul:1.8.0
-  imageK8S: hashicorp/consul-k8s:0.16.0
+  image: consul:1.9.1
+  imageK8S: hashicorp/consul-k8s:0.22.0
   datacenter: dc1-gke
   federation:
     enabled: true
@@ -12,6 +12,8 @@ meshGateway:
  enabled: true
 connectInject:
  enabled: true
+client:
+  enabled: true
 ui:
   service:
     type: LoadBalancer
