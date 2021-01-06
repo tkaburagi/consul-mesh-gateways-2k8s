@@ -1,7 +1,7 @@
 global:
   datacenter: dc2-eks
-  image: consul:1.8.0
-  imageK8S: hashicorp/consul-k8s:0.16.0
+  image: consul:1.9.1
+  imageK8S: hashicorp/consul-k8s:0.22.0
   tls:
     enabled: true
     caCert:
