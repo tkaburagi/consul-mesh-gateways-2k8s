@@ -1,7 +1,7 @@
 ![](2k8s.png)
 ![](2k8s-2.png)
 
-#setup (1.9.1)
+# setup (1.9.1)
 
 Helm
 ```shell script
