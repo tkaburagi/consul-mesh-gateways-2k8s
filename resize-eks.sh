@@ -17,14 +17,4 @@ elif [ $1 = 3 ]; then
     --region=ap-northeast-1 \
     --version=1.16
 
-    sleep 60
-
-    aws eks --region ap-northeast-1 update-kubeconfig --name consul-mesh-gateway-cluster-2
-
-    kubectl apply -f consul-federation-secret.yaml
-
-    helm install -f $2 consul hashicorp/consul --wait
-
-    kubectl get all
-
 fi

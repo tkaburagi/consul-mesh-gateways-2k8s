@@ -16,13 +16,5 @@ elif [ $1 = 3 ]; then
     --num-nodes $1 \
     --zone asia-northeast1-a
 
-#    sleep 60
-#
-#    helm del $(helm ls --all --short)
-#
-#    helm install -f $2 consul hashicorp/consul --wait
-#
-#    kubectl get secret consul-federation -o yaml > consul-federation-secret.yaml
-
     kubectl get all
 fi

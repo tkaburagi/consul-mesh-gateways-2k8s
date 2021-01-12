@@ -10,8 +10,8 @@ metadata:
   labels:
     app: "ui-java-eks"
   annotations:
-    "consul.hashicorp.com/connect-inject": "true"
-    "consul.hashicorp.com/connect-service-upstreams": "api-go-gke:5000:dc1-gke"
+    'consul.hashicorp.com/connect-inject': 'true'
+    'consul.hashicorp.com/connect-service-upstreams': 'api-go-gke:5000:dc1-gke'
 spec:
   containers:
     - name: ui-java-eks
@@ -31,7 +31,7 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 8080
+      port: 80
       targetPort: 8080
   selector:
     app: "ui-java-eks"

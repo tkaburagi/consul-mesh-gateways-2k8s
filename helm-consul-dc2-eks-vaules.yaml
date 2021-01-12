@@ -1,6 +1,7 @@
 global:
+  name: consul
   datacenter: dc2-eks
-  image: consul:1.9.1
+  image: consul:1.9.0
   imageK8S: hashicorp/consul-k8s:0.22.0
   tls:
     enabled: true
@@ -12,20 +13,25 @@ global:
       secretKey: caKey
   federation:
     enabled: true
-  name: consul
-server:
-  extraVolumes:
-  - type: secret
-    name: consul-federation
-    items:
-      - key: serverConfigJSON
-        path: config.json
-    load: true
+#  acls:
+#    manageSystemACLs: true
+#    replicationToken:
+#      secretName: consul-federation
+#      secretKey: replicationToken
+#  gossipEncryption:
+#    secretName: consul-federation
+#    secretKey: gossipEncryptionKey
 connectInject:
+  enabled: true
+client:
   enabled: true
 meshGateway:
   enabled: true
-syncCatalog:
-  enabled: true
-  toConsul: true
-  toK8S: true
+server:
+  extraVolumes:
+    - type: secret
+      name: consul-federation
+      items:
+        - key: serverConfigJSON
+          path: config.json
+      load: true
