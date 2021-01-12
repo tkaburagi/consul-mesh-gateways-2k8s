@@ -17,8 +17,8 @@ kc get secret consul-federation -o yaml > consul-federation-secret.yaml
 
 Consul EKS
 ```shell script
-helm install -f helm-consul-dc2-eks-values.yaml consul hashicorp/consul
 kc apply -f consul-federation-secret.yaml
+helm install -f helm-consul-dc2-eks-values.yaml consul hashicorp/consul
 ```
 
 API Go (on GKE)
